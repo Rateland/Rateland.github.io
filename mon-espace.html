@@ -20,21 +20,20 @@
     <main>
         <section id="user-form">
             <h1>Mon Espace</h1>
-            <form id="identification-form">
-                <label for="email">Adresse courriel:</label>
-                <input type="email" id="email" name="email" required>
-                <span class="tooltip">Où trouver votre adresse courriel?</span>
+            <div id="form-container">
+                <form id="identification-form">
+                    <label for="email">Adresse courriel:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="citizen-id">Numéro d'identification citoyenne:</label>
-                <input type="text" id="citizen-id" name="citizen-id" required>
-                <span class="tooltip">Où trouver votre numéro d'identification citoyenne?</span>
+                    <label for="citizen-id">Numéro d'identification citoyenne:</label>
+                    <input type="text" id="citizen-id" name="citizen-id" required>
 
-                <label for="birthdate">Date de naissance:</label>
-                <input type="date" id="birthdate" name="birthdate" required>
-                <span class="tooltip">Où trouver votre date de naissance?</span>
+                    <label for="birthdate">Date de naissance:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
 
-                <button type="submit">Se connecter</button>
-            </form>
+                    <button type="submit">Se connecter</button>
+                </form>
+            </div>
             <div id="notification" class="hidden">Notification flottante ici</div>
         </section>
     </main>

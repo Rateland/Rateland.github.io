@@ -19,11 +19,44 @@ header {
 }
 
 #user-form {
+    text-align: center;
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#identification-form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#identification-form label {
+    display: block;
+    margin-bottom: 10px; /* Ajout d'espace entre chaque label et input */
+}
+
+#identification-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px; /* Ajout d'espace entre chaque input */
+}
+
+#identification-form button {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
 }
 
 #notification {
