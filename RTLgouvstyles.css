@@ -5,18 +5,85 @@ html, body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif sans-serif;
     background-color: #f0f0f0;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    /* Styles du menu rapide */
+}
+
+
+#logo img {
+    width: 50px;
+    height: auto;
+}
+
+#title {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.slogan {
+    font-size: 18px;
+    color: #666;
+}
+
+#login-box {
+    /* Styles de la boîte de connexion */
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     background-color: #007acc;
     color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+}
+
+main {
+    padding-top: 100px; /* Pour éviter que le contenu soit caché par le header */
+    display: flex;
+    justify-content: space-between;
+}
+
+#content-left, #content-center, #content-right {
     padding: 20px;
 }
 
-nav {
-    /* Styles de la navigation */
+footer {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer-menu ul {
+    list-style-type: none;
+}
+
+#footer-menu ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
 #banner {
@@ -25,13 +92,41 @@ nav {
     height: 300px;
 }
 
-#content {
+.news-summary {
+    background-color: #fff;
+    border: 1px solid #ddd;
     padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
-footer {
+.news-summary:hover {
+    transform: scale(1.05);
+}
+
+.news-summary h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.news-summary p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.news-summary a {
+    display: inline-block;
     background-color: #007acc;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.news-summary a:hover {
+    background-color: #0058a8;
 }
