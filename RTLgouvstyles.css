@@ -1,0 +1,37 @@
+/* Réinitialisation des styles de base */
+html, body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px;
+}
+
+nav {
+    /* Styles de la navigation */
+}
+
+#banner {
+    background-image: url('banner-image.jpg');
+    background-size: cover;
+    height: 300px;
+}
+
+#content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
