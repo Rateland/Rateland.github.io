@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Espace - Rateland</title>
+    <link rel="stylesheet" href="styles-mon-espace.css">
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Mon Espace</a></li>
+                <!-- Ajoutez d'autres liens de menu si nécessaire -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="user-form">
+            <h1>Mon Espace</h1>
+            <form id="identification-form">
+                <label for="email">Adresse courriel:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="tooltip">Où trouver votre adresse courriel?</span>
+
+                <label for="citizen-id">Numéro d'identification citoyenne:</label>
+                <input type="text" id="citizen-id" name="citizen-id" required>
+                <span class="tooltip">Où trouver votre numéro d'identification citoyenne?</span>
+
+                <label for="birthdate">Date de naissance:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <span class="tooltip">Où trouver votre date de naissance?</span>
+
+                <button type="submit">Se connecter</button>
+            </form>
+            <div id="notification" class="hidden">Notification flottante ici</div>
+        </section>
+    </main>
+
+    <script src="script-mon-espace.js"></script>
+</body>
+</html>
