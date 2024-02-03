@@ -22,15 +22,24 @@
             <h1>Mon Espace</h1>
             <div id="form-container">
                 <form id="identification-form">
-                    <label for="email">Adresse courriel:</label>
+                    <label for="email">
+                        Adresse courriel 
+                        <span class="tooltip" data-tooltip="Où trouver votre adresse courriel?">&#x2753;</span>
+                    </label>
                     <input type="email" id="email" name="email" required>
-
-                    <label for="citizen-id">Numéro d'identification citoyenne:</label>
+                
+                    <label for="citizen-id">
+                        Numéro d'identification citoyenne 
+                        <span class="tooltip" data-tooltip="Où trouver votre numéro d'identification citoyenne?">&#x2753;</span>
+                    </label>
                     <input type="text" id="citizen-id" name="citizen-id" required>
-
-                    <label for="birthdate">Date de naissance:</label>
+                
+                    <label for="birthdate">
+                        Date de naissance 
+                        <span class="tooltip" data-tooltip="Où trouver votre date de naissance?">&#x2753;</span>
+                    </label>
                     <input type="date" id="birthdate" name="birthdate" required>
-
+                
                     <button type="submit">Se connecter</button>
                 </form>
             </div>
