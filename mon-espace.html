@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Espace - Rateland</title>
-    <link rel="stylesheet" href="styles-mon-espace.css">
+    <link rel="stylesheet" href="styles-mon-espace.css" media="screen" type="text/css">
 </head>
 <body>
     <header>
@@ -21,23 +21,16 @@
         <section id="user-form">
             <h1>Mon Espace</h1>
             <div id="form-container">
-                <form id="identification-form">
-                    <label for="email">
-                        Adresse courriel 
-                        <span class="tooltip" data-tooltip="Où trouver votre adresse courriel?">&#x2753;</span>
-                    </label>
-                    <input type="email" id="email" name="email" required>
-                
-                    <label for="citizen-id">
-                        Numéro d'identification citoyenne 
-                        <span class="tooltip" data-tooltip="Où trouver votre numéro d'identification citoyenne?">&#x2753;</span>
+                <form id="identification-form" action="verification.php" method="POST">
+                    <label for="email">Adresse courriel</label>
+                    <input type="email" id="email" placeholder="nom_prenom@exemple.com" name="email" required>
+
+                    <label for="citizen-id">Numéro d'identification citoyenne 
+                        <span class="infobulle" aria-label="Vous retrouverez ce numéro dans le courrier que vous avez reçu">( i )</span>
                     </label>
                     <input type="text" id="citizen-id" name="citizen-id" required>
                 
-                    <label for="birthdate">
-                        Date de naissance 
-                        <span class="tooltip" data-tooltip="Où trouver votre date de naissance?">&#x2753;</span>
-                    </label>
+                    <label for="birthdate">Date de naissance</label>
                     <input type="date" id="birthdate" name="birthdate" required>
                 
                     <button type="submit">Se connecter</button>
@@ -46,7 +39,16 @@
             <div id="notification" class="hidden">Notification flottante ici</div>
         </section>
     </main>
-
+    <footer>
+        <nav id="footer-menu">
+            <ul>
+                <li><a href="#">Qui sommes-nous</a></li>
+                <li><a href="#">RGPD</a></li>
+                <li><a href="mailto:ContactPresseRateland@protonmail.com">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
     <script src="script-mon-espace.js"></script>
+
 </body>
 </html>

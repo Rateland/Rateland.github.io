@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background: #fff;
 }
 
 header {
@@ -30,6 +31,7 @@ header {
 #form-container {
     max-width: 400px;
     margin: 0 auto;
+    margin-top:10%;
 }
 
 #identification-form {
@@ -51,7 +53,7 @@ header {
 
 #identification-form button {
     background-color: #007acc;
-    color: #fff;
+    color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -60,7 +62,7 @@ header {
 }
 
 #notification {
-    background-color: #ff8080;
+    background-color: #fff;
     color: #fff;
     padding: 10px;
     position: fixed;
@@ -70,22 +72,60 @@ header {
     display: none;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: help;
-}
+.infobulle {
+    position: relative;  /* les .infobulle deviennent référents */
+    cursor: pointer;
+  }
 
-.tooltip:before {
-    content: "?";
+.infobulle:hover::after,
+.infobulle:focus::after {
+    content: attr(aria-label);  /* on affiche aria-label */
     position: absolute;
-    display: none;
+    top: -1.4em;
+    left: 50%;
+    transform: translateX(-50%); /* on centre horizontalement  */
+    z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+    white-space: nowrap;  /* on interdit le retour à la ligne */
+    background-color: aquamarine;
+  }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   }
+   
+input[type=submit] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+   }
+   input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+   }ity: 1;
+ }
+
+ footer {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 20px;
+    
 }
 
-.tooltip:hover:before {
-    display: block;
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
+#footer-menu ul {
+    list-style-type: none;
+}
+
+#footer-menu ul li {
+    display: inline;
+    margin: 0 10px;
 }

@@ -14,17 +14,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #e0e0e0;
-    padding: 20px;
+    background-color: #fff;
+    margin: 0%;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-#menu {
-    /* Styles du menu rapide */
-}
-
 
 #logo img {
     width: 50px;
@@ -33,33 +29,38 @@ header {
 
 #title {
     text-align: center;
+    flex-grow: 1; /* Pour occuper l'espace restant dans le conteneur */
 }
 
 h1 {
     font-size: 24px;
     color: #333;
+    margin: 0; /* Pour enlever la marge par défaut du h1 */
 }
 
 .slogan {
     font-size: 18px;
     color: #666;
-}
-
-#login-box {
-    /* Styles de la boîte de connexion */
+    margin: 0; /* Pour enlever la marge par défaut du paragraphe */
 }
 
 #scroll-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007acc;
+    background-color: #000;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    display: none;
+    transition: opacity 0.1s; /* Ajouter une transition d'opacité */
 }
+
+#scroll-top:hover {
+    opacity: 1; /* Opacité au survol */
+}
+
+/* Fin du header, début du main */
 
 main {
     padding-top: 100px; /* Pour éviter que le contenu soit caché par le header */
@@ -71,25 +72,57 @@ main {
     padding: 20px;
 }
 
-footer {
-    background-color: #e0e0e0;
-    padding: 20px;
-    text-align: center;
-}
-
-#footer-menu ul {
+#menu ul {
     list-style-type: none;
+    padding: 0;
 }
 
-#footer-menu ul li {
-    display: inline;
-    margin: 0 10px;
+#menu li {
+    margin: 10px 0;
 }
 
-#banner {
-    background-image: url('banner-image.jpg');
-    background-size: cover;
-    height: 300px;
+#menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#menu a:hover {
+    color: #007acc;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 10px;
+}
+
+.sub-menu li {
+    margin: 5px 0;
+}
+
+.sub-menu a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.sub-menu a:hover {
+    color: #007acc;
+    transform: scale(1.1);
 }
 
 .news-summary {
@@ -131,55 +164,17 @@ footer {
     background-color: #0058a8;
 }
 
-#menu ul {
+footer {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer-menu ul {
     list-style-type: none;
-    padding: 0;
 }
 
-#menu li {
-    margin: 10px 0;
-}
-
-#menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-#menu a:hover {
-    color: #007acc;
-}
-
-.submenu {
-    position: relative;
-}
-
-.sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none;
-    padding: 10px;
-}
-
-.submenu:hover .sub-menu {
-    display: block;
-}
-
-.sub-menu li {
-    margin: 5px 0;
-}
-
-.sub-menu a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.2s ease-in-out;
-}
-
-.sub-menu a:hover {
-    color: #007acc;
-    transform: scale(1.1);
+#footer-menu ul li {
+    display: inline;
+    margin: 0 10px;
 }
